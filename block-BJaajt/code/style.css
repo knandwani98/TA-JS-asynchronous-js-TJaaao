@@ -137,12 +137,18 @@ body {
 header {
   background-color: black;
   color: antiquewhite;
-}
-
-h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   padding: 1rem 0;
+}
+
+section {
+  text-align: center;
+}
+
+hr {
+  border: 1px solid grey;
+  margin: 4rem 0;
 }
 
 input {
@@ -151,11 +157,7 @@ input {
   border-radius: 8px;
 }
 
-.sec-1 {
-  text-align: center;
-}
-
-img {
+div img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -173,17 +175,26 @@ address {
   text-decoration: underline;
   font-weight: bold;
   margin: 0.1rem 0;
+  margin-bottom: 2rem;
 }
 
-ul {
-  margin: 1rem 0;
-  margin-top: 2rem;
+.flx {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-li {
+ul {
+  margin: 1rem 0;
+  margin-top: 2rem;
+}
+
+ul li {
+  margin: 0 1rem;
+}
+
+li,
+h3 {
   font-size: 1.2rem;
   font-weight: bolder;
 }
@@ -192,4 +203,29 @@ li img {
   width: 60px;
   height: 60px;
   border: 1px solid black;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.cat {
+  flex-direction: column;
+}
+
+.cat img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.cat button {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  background-color: #c8bc8f;
 }
