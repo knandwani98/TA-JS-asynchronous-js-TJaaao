@@ -151,8 +151,17 @@ main {
 }
 
 input {
+  width: 75%;
   font-size: 1rem;
   border-radius: 8px;
   padding: 0.6rem 1rem;
   font-style: italic;
+  margin-bottom: 3rem;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
