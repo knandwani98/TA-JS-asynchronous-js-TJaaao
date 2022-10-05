@@ -24,6 +24,6 @@ let data = fetch('https://api.github.com/users/prank7')
   .then((data) => {
     console.log(data.name);
   })
-  .catch((error) => {
+  .catch((msg) => {
     alert('Check your internet connection');
   });
