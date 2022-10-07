@@ -2,11 +2,13 @@
 
 // ```js
 // Your code
-new Promise((res, rej) => {
+let promise = new Promise((res, rej) => {
   setTimeout(() => {
     res(`Promise Resolved!`);
   }, 1000);
-}).then((value) => {
+});
+
+promise.then((value) => {
   console.log(value, '- after 1000 ms');
 });
 
@@ -63,10 +65,11 @@ new Promise((res, rej) => {
 function wait(time) {
   return new Promise((res, rej) => {
     setTimeout(() => {
-      res(console.log('Promise Resolved!'));
+      res('Promise Resolved!');
     }, time);
   });
 }
+wait(1000);
 // ```
 
 // 6. Do the following:
