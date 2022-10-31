@@ -41,9 +41,11 @@ function createUI(data = allNews) {
     a.innerText = elm.newsSite;
     const h2 = document.createElement('h2');
     h2.innerText = elm.title;
-    const button = document.createElement('button');
+    const button = document.createElement('a');
+    button.classList.add('button');
     button.innerText = 'Read More';
-
+    button.href = elm.url;
+    button.target = '_blank';
     div.append(a, h2, button);
     article.append(img, div);
     root.append(article);
