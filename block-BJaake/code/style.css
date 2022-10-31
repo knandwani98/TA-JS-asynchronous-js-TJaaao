@@ -210,7 +210,7 @@ article .content {
   flex: 0 1 58%;
 }
 
-article .content button {
+article .content .button {
   display: inline-block;
   margin-top: 1rem;
   background-color: black;
