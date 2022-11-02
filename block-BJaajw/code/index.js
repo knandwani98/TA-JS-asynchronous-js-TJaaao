@@ -10,7 +10,7 @@ function displayError(msg = 'Something Went Wrong') {
   errorElm.style.display = 'block';
 }
 
-function displayLoader(status) {
+function displayLoader(status = false) {
   if (status) {
     root.innerHTML = `<div class="loader"><div class="donut"></div></div>`;
   }
