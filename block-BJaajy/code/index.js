@@ -13,7 +13,7 @@ const p1 = new Promise((res, rej) => {
     setTimeout(res, 4000, 'foooo');
   });
 
-Promise.all([p1, p2, p3, p4]).then((values) => console.log(values));
+Promise.all([p1, p2, p3, p4]).then(console.log);
 
 // - Create a list of 5 Github usernames in an array and using `Promise.all` get access to the data of each user from GitHub API. Log the number of followers of each user.
 
@@ -41,10 +41,10 @@ Promise.all([userName1, userName2, userName3, userName4, userName5]).then(
 //   - https://random.dog/woof.json
 //   - https://aws.random.cat/meow
 
-const api1 = 'https://random.dog/woof.json',
-  api2 = 'https://aws.random.cat/meow';
-
-Promise.race([api1, api2]).then((res) => console.log(res));
+Promise.race([
+  `https://aws.random.cat/meow`,
+  `https://random.dog/woof.json`,
+]).then(console.log);
 
 // - Use `Promise.allSettled` to log the value of each promise from the given list of promises. And also check if `Promise.all` works with `one`, `two` and `three` or not
 
@@ -59,7 +59,7 @@ const three = new Promise((resolve, reject) =>
   setTimeout(() => resolve('John'), 3000)
 );
 
-Promise.allSettled([one, two, three]).then((res) => console.log(res));
+Promise.allSettled([one, two, three]).then(console.log);
 // ```
 
 // - What will be the output of the following code snippet? How much time will it take for the promise to resolve?
@@ -73,5 +73,5 @@ Promise.all([
   { name: 'John' },
 ]).then(console.log);
 
-// ["Arya", "Sam", "John"] // after 1 sec
+// ["Arya", "Sam", {name: "John}"] // after 1 sec
 // ```
