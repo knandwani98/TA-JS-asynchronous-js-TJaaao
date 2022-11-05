@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* -------------------------------- */
+
+:root {
+  --one: #ffefd6;
+  --two: #f2deba;
+  --three: #3a8891;
+  --four: #0e5e6f;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--two);
+}
+
+header {
+  background-color: var(--four);
+  color: var(--one);
+  padding: 0.8rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--one);
+}
+
+h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--four);
+}
+
+cite {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--three);
+  display: block;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1rem;
+  padding: 2rem;
+}
+
+.grid {
+  padding: 2rem;
+  background-color: var(--one);
+  border: 1px dotted var(--four);
+  flex: 0 1 25%;
+  align-self: stretch;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  margin: 1rem 0;
+  background-color: var(--four);
+  color: var(--one);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.ripple-loader {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.ripple-loader div {
+  position: absolute;
+  border: 4px solid #454ade;
+  border-radius: 50%;
+  animation: ripple-loader 1s ease-out infinite;
+}
+
+.ripple-loader div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes ripple-loader {
+  0% {
+    top: 32px;
+    left: 32px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    opacity: 0;
+  }
+}
+
+.char-div {
+  margin: 1rem;
+  padding: 1rem;
+  color: var(--two);
+  border: 2px dotted var(--four);
+  line-height: 1.8;
+  font-weight: 600;
+  background-color: var(--three);
+}
+
+.close-btn {
+  position: absolute;
+  font-size: 1rem;
+  background-color: var(--two);
+  color: red;
+  padding: 0.5rem 0.7rem;
+  font-weight: 700;
+
+  right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    flex: 0 1 37.5%;
+  }
+}
