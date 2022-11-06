@@ -9,6 +9,8 @@ const loaderContainer = document.querySelector('.loader-container');
 
 function displayLoader(status = false) {
   if (status) {
+    loaderContainer.style.display = 'flex';
+
     loader.innerHTML = `<div class="ripple-loader">
         <div></div>
         <div></div>
@@ -21,7 +23,6 @@ function displayLoader(status = false) {
 }
 
 function toggleClose(toggle = false) {
-  displayLoader(true);
   if (toggle) {
     let closeBtn = document.createElement('a');
     hOne.innerText = 'All Characters';
